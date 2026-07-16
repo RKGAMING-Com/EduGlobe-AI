@@ -1,8 +1,9 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5000/api",
+  baseURL: "https://eduglobe-ai.onrender.com/api",
 });
+
 
 export const healthCheck = () => api.get("/health");
 
@@ -17,5 +18,6 @@ export const generateContent = (payload) =>
 
 export const askTutor = (payload) =>
   api.post("/ai/tutor", payload);
+
 
 export default api;
