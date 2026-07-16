@@ -14,9 +14,18 @@ function DashboardPage() {
   }
 
   const cards = [
-    { title: 'Continue learning', detail: 'Pick up where you left off and keep momentum going.' },
-    { title: 'Homework', detail: 'Review tasks and get helpful explanations quickly.' },
-    { title: 'AI Teacher', detail: 'Ask questions and get guidance in a relaxed study flow.' },
+    {
+      title: 'Continue learning',
+      detail: 'Pick up where you left off and keep momentum going.',
+    },
+    {
+      title: 'Homework',
+      detail: 'Review tasks and get helpful explanations quickly.',
+    },
+    {
+      title: 'AI Teacher',
+      detail: 'Ask questions and get guidance in a relaxed study flow.',
+    },
   ];
 
   const onLogout = () => {
@@ -29,11 +38,21 @@ function DashboardPage() {
       <header className="dashboard-header">
         <div>
           <p className="eyebrow">Good morning</p>
-          <h1>Welcome back, {user?.name || 'Student'}</h1>
+          <h1>
+            Welcome back, {user?.name || 'Student'}
+          </h1>
         </div>
+
         <div className="dashboard-actions">
-          <div className="pill">{user?.role || 'student'} dashboard</div>
-          <button className="secondary-btn" type="button" onClick={onLogout}>
+          <div className="pill">
+            {user?.role || 'student'} dashboard
+          </div>
+
+          <button
+            className="secondary-btn"
+            type="button"
+            onClick={onLogout}
+          >
             Log out
           </button>
         </div>
